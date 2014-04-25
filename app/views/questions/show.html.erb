@@ -9,8 +9,9 @@
   </ul>
 </div>
 
-
-<%= link_to "Answer this Question", "#", :class => "new-answer" %>
+<% if current_user %>
+  <%= link_to "Answer this Question", "#", :class => "new-answer" %>
+<% end %>
 
   <%= form_for [@question, Answer.new], remote: true, :html => {:class => 'hidden'} do |f| %>
     <%= f.text_field :title, :placeholder => "optional title" %><br>
