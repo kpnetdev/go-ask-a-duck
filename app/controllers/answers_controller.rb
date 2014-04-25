@@ -1,17 +1,12 @@
 class AnswersController < ApplicationController
 
-  def new
-    @question = Question.find(params[:question_id])
-    @answer = Answer.new
-  end
-
   def create
     question = Question.find(params[:question_id])
     @answer = question.answers.build(params[:answer])
     if @answer.save
-      redirect_to question_path(question)
+      render :partial => 'answers/show', :locals => { :answer => @answer }
     else
-      render :new
+      render text: @answer.errors.full_messages.join(" "), status: :unprocessable_entity
     end
   end
 
