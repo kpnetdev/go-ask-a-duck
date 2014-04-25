@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe "Questions" do
   let!(:question) {FactoryGirl.create :question}
-  context "#index" do
+
+  context "Homepage" do
     it "should give us form when we click on create" do
       visit questions_path
       click_on "Ask the Duck"
@@ -15,13 +16,20 @@ describe "Questions" do
     end
   end
 
-  context "#new" do
+  context "Create a new question page" do
     it "should fill in a form" do
       visit new_question_path
       fill_in "Title", :with => question.title
       fill_in "Body", :with => question.body
       click_on "Create Question"
       expect(page).to have_content question.title
+    end
+  end
+
+  context "Show question page" do
+    it "should show the question" do
+      visit question_path(question)
+      expect(page).to have_content question.body
     end
   end
 end
