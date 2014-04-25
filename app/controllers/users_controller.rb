@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       user = User.new params[:user]
       user.password = params[:password]
       if user.save
-        redirect_to root_path
+        redirect_to new_user_path
       else
         flash.alert = user.errors.full_messages.join(' : ')
         render 'new'
