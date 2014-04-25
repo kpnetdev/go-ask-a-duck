@@ -1,6 +1,23 @@
+<div class="navbar">
+  <ul>
+    <% if current_user %>
+      <li><%= link_to "Logout", logout_path %></li>
+    <% else %>
+      <li><%= link_to "Sign Up", new_user_path, class: 'nav-signup' %></li>
+      <li><%= link_to "Login", new_session_path, class: 'nav-login' %></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= render 'users/signup' %>
+<%= render 'sessions/login' %>
+
 <h1>Ask The Duck!</h1>
 
+
+<% if current_user %>
 <%= link_to "Ask the Duck", new_question_path%>
+<% end %>
 
 <ul>
 <% @questions.each do |question| %>
