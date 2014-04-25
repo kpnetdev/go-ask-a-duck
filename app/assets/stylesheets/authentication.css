@@ -1,0 +1,22 @@
+html {
+	background: url(http://www.mrwallpaper.com/wallpapers/rubber-duck-city.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+div {
+	width: 200px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+li {
+  font: 200 17px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+li .pretty_button {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+}
