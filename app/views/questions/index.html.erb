@@ -1,0 +1,9 @@
+<h1>Ask The Duck!</h1>
+
+<%= link_to "Ask the Duck", new_question_path%>
+
+<ul>
+<% @questions.each do |question| %>
+  <li><%= link_to question.title, question_path(question.id) %></li>
+<% end %>
+</ul>
