@@ -1,3 +1,8 @@
+html {
+	background: url(http://www.mrwallpaper.com/wallpapers/rubber-duck-city.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
 div {
 	width: 200px;
 }
