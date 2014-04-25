@@ -31,5 +31,11 @@ describe "Questions" do
       visit question_path(question)
       expect(page).to have_content question.body
     end
+
+    it "should return to homepage when we click on button" do
+      visit question_path(question)
+      click_on "Homepage"
+      expect(page).to have_content "Ask The Duck!"
+    end
   end
 end
