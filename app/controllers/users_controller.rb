@@ -5,13 +5,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    if params[:user][:password] == params[:user][:password_confirmation]
-      user = User.new(email: params[:user][:email], username: params[:user][:username])
-      user.password = params[:user][:password]
+    if params[:password] == params[:password_confirmation]
+      user = User.new params[:user]
+      user.password = params[:password]
       if user.save
         redirect_to root_path
       else
-        flash.alert = "Problem with saving record!"
+        flash.alert = user.errors.full_messages.join(' : ')
         render 'new'
       end
     else
