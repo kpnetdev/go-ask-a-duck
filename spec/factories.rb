@@ -8,4 +8,10 @@ FactoryGirl.define do
     title {Faker::Lorem.word}
     body {Faker::Lorem.sentence}
   end
+
+  factory :answer do
+    title { Faker::Lorem.word }
+    body { Faker::Lorem.sentence }
+    question
+  end
 end
