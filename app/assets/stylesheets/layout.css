@@ -4,6 +4,31 @@
 
 body {
   background-color: transparent;
+  font-family: 'Open Sans Condensed', 'sans-serif';
+
+}
+
+a {
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.answers {
+  margin: 2.4%;
+  padding-left: 5%;
+  background-color: rgba(150,150,150,0.5);
+  border-radius: 5px;
+}
+
+.answers:nth-child(odd) {
+  background-color: rgba(75,75,75,0.5);
+  border-left: 7px solid rgba(135,206,250,0.5);
+  border-right: 7px solid rgba(135,206,250,0.5);
+}
+
+.answers:nth-child(even) {
+  border-left: 7px solid rgba(0,255,255,0.5);
+  border-right: 7px solid rgba(0,255,255,0.5);
 }
 
 #main_index {
@@ -16,6 +41,16 @@ body {
 }
 
 #main_question {
+  background-color: rgba(255,255,255,0.5);
+  width: 50%;
+  border: 5px;
+  border-radius: 5px;
+  margin-top: 5%;
+  margin-left: 5%;
+  padding: 5px;
+}
+
+#new_question {
   background-color: rgba(255,255,255,0.5);
   width: 50%;
   border: 5px;
