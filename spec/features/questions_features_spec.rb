@@ -2,6 +2,15 @@ require 'spec_helper'
 
 describe "Questions" do
   let!(:question) {FactoryGirl.create :question}
+  before(:each) do
+    visit root_path
+    click_on "Sign Up"
+    fill_in "Username", :with => Faker::Lorem.word
+    fill_in "Email", :with => Faker::Internet.email
+    fill_in "Password", :with => "moo"
+    fill_in "Password confirmation", :with => "moo"
+    click_on "Sign Up!"
+  end
 
   context "Homepage" do
     it "should give us form when we click on create" do
