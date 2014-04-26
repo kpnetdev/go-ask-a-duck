@@ -11,20 +11,30 @@ describe "Authentication" do
 
 		it "should display login form when login button is clicked" do
 			visit root_path
-			click_on "Sign Up"
-			expect(page).to have_css 'div.sign-up'
-
-
+			click_on "Login"
+			expect(page).to have_css 'div.login'
 		end
 	end
 
+
+
 	context "When signup form is already displayed" do
-		it "should display no form when signup button is clicked" do
-
-
+	
+		before(:each) do
+			visit root_path
+			click_on "Sign Up"
 		end
 
-		it "should switch to login form when login button is clicked" do
+		it "should initially have the form displayed" do
+			expect(page).to have_css 'div.sign-up'
+		end
+	
+		xit "should display no form when signup button is clicked" do
+			click_on "Sign Up"
+			expect(page).to_not have_css 'div.sign-up'
+		end
+
+		xit "should switch to login form when login button is clicked" do
 
 
 		end
