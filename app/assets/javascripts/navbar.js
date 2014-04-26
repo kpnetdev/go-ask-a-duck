@@ -1,35 +1,23 @@
-var Login = {
-  init: function(){
-    $('a.nav-login').on('click', this.toggleVisibility);
-  },
-  toggleVisibility: function(e) {
-    e.preventDefault();
-    $('.login').toggleClass('visible');
-  }
-}
-
-var SignUp = {
-  init: function() {
-    $('a.nav-signup').on('click', this.toggleVisibility);
-  },
-  toggleVisibility: function(e) {
-    e.preventDefault();
-    $('.sign-up').toggleClass('visible');
-  }
-}
-
-
-
 var Navbar = {
-  loginElement : $('a.nav-login')
-  signupElement : $('a.nav-signup')
+  init: function() {
+    $('a.nav-login').on('click', this.toggleLogin);
+    $('a.nav-signup').on('click', this.toggleSignup);
+  },
+  toggleSignup: function(e) {
+    e.preventDefault();
+    $('.sign-up').addClass('visible');
+    $('.login').removeClass('visible');
+    $('.form-area').toggleClass('visible');
+  },
+  toggleLogin: function(e) {
+    e.preventDefault();
+    $('.login').addClass('visible');
+    $('.sign-up').removeClass('visible');
+    $('.form-area').toggleClass('visible');
+  }
 }
-
-
-
 
 
 $(document).ready(function(){
-  Login.init();
-  SignUp.init();
+  Navbar.init();
 })
