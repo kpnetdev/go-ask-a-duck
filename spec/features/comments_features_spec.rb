@@ -9,7 +9,8 @@ describe "leaving comments" do
 	   ApplicationController.any_instance.stub(:current_user).and_return(user)
 		end
 
-		xit "can leave a comment on a question" do
+		it "can leave a comment on a question" do
+			
 
 		end
 
