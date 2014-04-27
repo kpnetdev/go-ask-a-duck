@@ -2,14 +2,10 @@ require 'spec_helper'
 
 describe "Questions" do
   let!(:question) {FactoryGirl.create :question}
+  let!(:user) { FactoryGirl.create :user}
+  
   before(:each) do
-    visit root_path
-    click_on "Sign Up"
-    fill_in "Username", :with => Faker::Lorem.word
-    fill_in "Email", :with => Faker::Internet.email
-    fill_in "Password", :with => "moo"
-    fill_in "Password confirmation", :with => "moo"
-    click_on "Sign Up!"
+    ApplicationController.any_instance.stub(:current_user).and_return(user)
   end
 
   context "Homepage" do
