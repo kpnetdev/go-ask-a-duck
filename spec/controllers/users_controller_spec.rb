@@ -4,7 +4,7 @@ describe UsersController do
   let(:user_atts) { FactoryGirl.attributes_for :user }
   let(:pass) { Faker::Lorem.word }
   context "#create" do
-    it "creates a user when the entered passwords match" do
+    xit "creates a user when the entered passwords match" do
       init_hash = { password: pass, password_confirmation: pass, user: user_atts }
       expect {
         post :create, init_hash

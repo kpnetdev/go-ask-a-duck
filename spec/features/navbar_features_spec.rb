@@ -33,10 +33,5 @@ describe "Authentication" do
 			click_on "Sign Up"
 			expect(page).to_not have_css 'div.sign-up'
 		end
-
-		xit "should switch to login form when login button is clicked" do
-
-
-		end
 	end
 end

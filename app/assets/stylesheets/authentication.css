@@ -1,5 +1,5 @@
 html {
-	background: url(http://www.mrwallpaper.com/wallpapers/rubber-duck-city.jpg) no-repeat center center fixed;
+	background: url(duck.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -18,9 +18,9 @@ li {
   font: 200 17px/1.5 Helvetica, Verdana, sans-serif;
 }
 
-li .pretty_button {
+/*li .pretty_button {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-}
+}*/
 
 .navbar {
   display: block;
@@ -43,7 +43,7 @@ li .pretty_button {
 .navbar ul li a {
   display: block;
   width: 70px;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -52,6 +52,9 @@ li .pretty_button {
   margin-top: 10px;
   margin-right: 30px;
   display: none;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  padding: 2%;
 }
 
 
@@ -59,7 +62,10 @@ li .pretty_button {
   float: right;
   margin-top: 10px;
   margin-right: 30px;
+  padding: 2%;
   display: none;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
 }
 
 .form-area {
