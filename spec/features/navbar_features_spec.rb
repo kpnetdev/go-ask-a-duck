@@ -25,18 +25,13 @@ describe "Authentication" do
 			click_on "Sign Up"
 		end
 
-		it "should initially have the form displayed" do
+		it "should initially have the form displayed", js: true do
 			expect(page).to have_css 'div.sign-up'
 		end
 	
-		xit "should display no form when signup button is clicked" do
+		it "should display no form when signup button is clicked", js: true do
 			click_on "Sign Up"
 			expect(page).to_not have_css 'div.sign-up'
-		end
-
-		xit "should switch to login form when login button is clicked" do
-
-
 		end
 	end
 end
