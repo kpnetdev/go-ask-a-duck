@@ -49,6 +49,8 @@ li {
 
 .sign-up {
   float: right;
+  margin-top: 10px;
+  margin-right: 30px;
   display: none;
   background-color: rgba(255,255,255,0.5);
   border-radius: 5px;
@@ -64,6 +66,11 @@ li {
   display: none;
   background-color: rgba(255,255,255,0.5);
   border-radius: 5px;
+}
+
+.form-area {
+  float: right;
+  display: none;
 }
 
 

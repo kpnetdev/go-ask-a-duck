@@ -14,3 +14,7 @@ MVP:
 * A logged in user can post a question
 * A logged in user can submit an answer
 
+
+TODO:
+  Stub current_user for tests
+  STI for questions and answers
