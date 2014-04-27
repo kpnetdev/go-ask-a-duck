@@ -1,5 +1,4 @@
-class Answer < ActiveRecord::Base
-  attr_accessible :title, :body
-  belongs_to :question
+class Answer < Post
   validates :body, :question_id, presence: true
+  belongs_to :question
 end
