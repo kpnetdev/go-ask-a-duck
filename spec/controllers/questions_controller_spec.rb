@@ -32,6 +32,12 @@ describe QuestionsController do
   end
 
   context "#create" do
+
+    let(:user) { FactoryGirl.create :user }
+    before(:each) do
+      ApplicationController.any_instance.stub(:current_user).and_return(user)
+    end
+
     it "creates with valid attributes" do
       expect {
         post :create, :question => FactoryGirl.attributes_for(:question)
